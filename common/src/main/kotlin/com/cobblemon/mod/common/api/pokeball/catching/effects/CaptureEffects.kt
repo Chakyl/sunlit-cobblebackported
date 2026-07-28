@@ -31,5 +31,11 @@ object CaptureEffects {
      * @return The created capture effect.
      */
     fun friendshipSetter(value: Int) = CaptureEffect { _, pokemon -> pokemon.setFriendship(value) }
+    /**
+     * Used by [PokeBalls.BLOSSOM_BALL].
+     * Makes the mon shiny
+     *  @return The created capture effect.
+     */
+    fun shinySetter() = CaptureEffect { _, pokemon -> pokemon.shiny = true }
 
 }

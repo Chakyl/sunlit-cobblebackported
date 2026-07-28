@@ -116,6 +116,18 @@ object CobblemonItems : PlatformRegistry<Registry<Item>, RegistryKey<Registry<It
     @JvmField
     val BEAST_BALL = pokeBallItem(PokeBalls.BEAST_BALL)
     @JvmField
+    val SWORD_BALL = pokeBallItem(PokeBalls.SWORD_BALL)
+    @JvmField
+    val SHIELD_BALL = pokeBallItem(PokeBalls.SHIELD_BALL)
+    @JvmField
+    val SKULL_BALL = pokeBallItem(PokeBalls.SKULL_BALL)
+    @JvmField
+    val MANA_BALL = pokeBallItem(PokeBalls.MANA_BALL)
+    @JvmField
+    val BLOSSOM_BALL = pokeBallItem(PokeBalls.BLOSSOM_BALL)
+    @JvmField
+    val PRISMATIC_BALL = pokeBallItem(PokeBalls.PRISMATIC_BALL)
+    @JvmField
     val MASTER_BALL = pokeBallItem(PokeBalls.MASTER_BALL)
     @JvmField
     val CHERISH_BALL = pokeBallItem(PokeBalls.CHERISH_BALL)

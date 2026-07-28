@@ -10,6 +10,7 @@ package com.cobblemon.mod.common.api.pokeball.catching.modifiers
 
 import com.cobblemon.mod.common.api.pokeball.PokeBalls
 import com.cobblemon.mod.common.api.pokeball.catching.CatchRateModifier
+import com.cobblemon.mod.common.api.pokemon.stats.Stats
 import com.cobblemon.mod.common.api.pokemon.status.Status
 import com.cobblemon.mod.common.api.tags.CobblemonBiomeTags
 import com.cobblemon.mod.common.api.types.ElementalType
@@ -120,7 +121,17 @@ object CatchRateModifiers {
         else
             1F
     }
-
+    /**
+     * Used by [PokeBalls.SKULL_BALL].
+     * Checks if the entity is in a biome valid for the tag [CobblemonBiomeTags.IS_SKULL_CAVERN].
+     * If yes boosts the catch rate by *4F
+     */
+    val SKULL_BALL = WorldStateModifier { _, entity ->
+        if (entity.world.getBiome(entity.blockPos).isIn(CobblemonBiomeTags.IS_SKULL_CAVERN))
+            3.5F
+        else
+            1F
+    }
     /**
      * Used by [PokeBalls.HEAVY_BALL].
      * The base implementation of the heavy ball modifier mechanics.
@@ -166,5 +177,27 @@ object CatchRateModifiers {
         val battle = BattleRegistry.getBattleByParticipatingPlayer(player) ?: return@BattleModifier 1F
         multiplierCalculator.invoke(battle.turn)
     }
+    /**
+     * Used by [PokeBalls.SWORD_BALL] and [PokeBalls.SHIELD_BALL].
+     * Boosts the catch rate depending on combination of both stats
+     */
+    fun statBased(stat1: Stats, stat2: Stats): CatchRateModifier = DynamicMultiplierModifier({ _, pokemon ->
+        val totalStats = (pokemon.species.baseStats.get(stat1)?.toFloat() ?: 0f) + (pokemon.species.baseStats.get(stat2)?.toFloat() ?: 0f)
+        when {
+            totalStats >= 200F -> 4F
+            totalStats >= 150F -> 3F
+            totalStats >= 100F -> 2F
+            totalStats >= 50F -> 1F
+            else -> 0.5F
+        }
+    }) { _, pokemon -> (pokemon.species.baseStats.get(stat1)?.toFloat() ?: 0f) + (pokemon.species.baseStats.get(stat2)?.toFloat() ?: 0f) >= 0F }
+
+    val PRISMATIC_BALL: DynamicMultiplierModifier = DynamicMultiplierModifier({ _, pokemon ->
+        when {
+            pokemon.shiny -> 4F
+            else -> 3.0F
+        }
+    }) { _, pokemon -> true }
+
 
 }
