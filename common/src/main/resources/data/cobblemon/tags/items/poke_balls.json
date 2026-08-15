@@ -33,6 +33,12 @@
     "cobblemon:park_ball",
     "cobblemon:dream_ball",
     "cobblemon:beast_ball",
+    "cobblemon:sword_ball",
+    "cobblemon:shield_ball",
+    "cobblemon:prismatic_ball",
+    "cobblemon:mana_ball",
+    "cobblemon:skull_ball",
+    "cobblemon:blossom_ball",
     "#cobblemon:ancient_poke_balls"
   ]
 }

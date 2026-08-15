@@ -2,6 +2,8 @@
   "replace": false,
   "values": [
     "cobblemon:master_ball",
-    "cobblemon:ancient_origin_ball"
+    "cobblemon:ancient_origin_ball",
+    "cobblemon:prismatic_ball",
+    "cobblemon:blossom_ball"
   ]
 }
