@@ -121,6 +121,18 @@ object PokeBalls : JsonDataRegistry<PokeBall> {
         get() = this.byName("dream_ball")
     val BEAST_BALL
         get() = this.byName("beast_ball")
+    val SWORD_BALL
+        get() = this.byName("sword_ball")
+    val SHIELD_BALL
+        get() = this.byName("shield_ball")
+    val SKULL_BALL
+        get() = this.byName("skull_ball")
+    val MANA_BALL
+        get() = this.byName("mana_ball")
+    val BLOSSOM_BALL
+        get() = this.byName("blossom_ball")
+    val PRISMATIC_BALL
+        get() = this.byName("prismatic_ball")
     val ANCIENT_POKE_BALL
         get() = this.byName("ancient_poke_ball")
     val ANCIENT_CITRINE_BALL
@@ -192,6 +204,12 @@ object PokeBalls : JsonDataRegistry<PokeBall> {
         createDefault("park_ball", CatchRateModifiers.PARK)
         createDefault("dream_ball", CatchRateModifiers.statusBoosting(4F, Statuses.SLEEP))
         createDefault("beast_ball", LabelModifier(5F, true, CobblemonPokemonLabels.ULTRA_BEAST)/*, LabelModifier(0.1F, false, CobblemonPokemonLabels.ULTRA_BEAST))*/)
+        createDefault("sword_ball", CatchRateModifiers.statBased(Stats.ATTACK, Stats.SPECIAL_ATTACK))
+        createDefault("shield_ball", CatchRateModifiers.statBased(Stats.DEFENCE, Stats.SPECIAL_DEFENCE))
+        createDefault("skull_ball", CatchRateModifiers.SKULL_BALL)
+        createDefault("mana_ball", MultiplierModifier(3.5F))
+        createDefault("blossom_ball", modifier = MultiplierModifier(0.5F), effects = listOf(CaptureEffects.shinySetter()))
+        createDefault("prismatic_ball", CatchRateModifiers.PRISMATIC_BALL)
         createDefault("ancient_poke_ball", ancient = true)
         createDefault("ancient_citrine_ball", ancient = true)
         createDefault("ancient_verdant_ball", ancient = true)

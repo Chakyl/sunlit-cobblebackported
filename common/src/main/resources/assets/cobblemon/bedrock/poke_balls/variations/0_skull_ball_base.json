@@ -4,9 +4,9 @@
   "variations": [
     {
       "aspects": [],
-      "poser": "cobblemon:ancient_poke_ball",
-      "model": "cobblemon:ancient_poke_ball.geo",
-      "texture": "cobblemon:textures/poke_balls/ancient_azure_ball.png",
+      "poser": "cobblemon:poke_ball",
+      "model": "cobblemon:poke_ball.geo",
+      "texture": "cobblemon:textures/poke_balls/skull_ball.png",
       "layers": []
     }
   ]

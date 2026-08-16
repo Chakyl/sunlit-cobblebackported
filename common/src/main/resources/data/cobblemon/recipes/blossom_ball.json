@@ -1,0 +1,30 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        " t ",
+        "lcr",
+        " b "
+    ],
+    "key": {
+        "t": {
+            "item": "minecraft:netherite_block"
+        },
+        "l": {
+            "item": "cobblemon:ability_capsule"
+        },
+        "c": {
+            "item": "cobblemon:master_ball"
+        },
+        "r": {
+            "item": "cobblemon:ability_capsule"
+        },
+        "b": {
+            "item": "minecraft:netherite_block"
+        }
+    },
+    "result":
+    {
+        "item": "cobblemon:blossom_ball",
+        "count": 1
+    }
+}
