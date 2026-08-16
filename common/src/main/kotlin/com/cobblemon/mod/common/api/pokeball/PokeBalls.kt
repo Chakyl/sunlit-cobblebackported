@@ -165,9 +165,6 @@ object PokeBalls : JsonDataRegistry<PokeBall> {
         get() = this.byName("ancient_jet_ball")
     val ANCIENT_ORIGIN_BALL
         get() = this.byName("ancient_origin_ball")
-    // test adding new ball
-    val SKULL_BALL
-        get() = this.byName("skull_ball")
 
     init {
         createDefault("poke_ball")
@@ -226,8 +223,6 @@ object PokeBalls : JsonDataRegistry<PokeBall> {
         createDefault("ancient_wing_ball", throwPower = 2.5f, ancient = true)
         createDefault("ancient_jet_ball", throwPower = 2.5f, ancient = true)
         createDefault("ancient_origin_ball", GuaranteedModifier(), ancient = true)
-        // skull ball
-        createDefault("skull_ball", CatchRateModifiers.DIMENSIONAL)
         // Luxury ball effect, low priority as it must be triggered before soothe bell as of gen 4
         CobblemonEvents.FRIENDSHIP_UPDATED.subscribe(priority = Priority.LOW) { event ->
             var increment = (event.newFriendship - event.pokemon.friendship).toFloat()

@@ -201,8 +201,7 @@ object CatchRateModifiers {
     }) { _, pokemon -> true }
 
 
-    // Skull ball stuff goes here
-    /** Used by [PokeBalls.SKULL_BALL] for now.
+    /*
      * Boosts catch rate by dimension.
      */
     val DIMENSIONAL = WorldStateModifier { _, entity ->

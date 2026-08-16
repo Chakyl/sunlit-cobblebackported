@@ -163,9 +163,6 @@ object CobblemonItems : PlatformRegistry<Registry<Item>, RegistryKey<Registry<It
     val ANCIENT_GIGATON_BALL = pokeBallItem(PokeBalls.ANCIENT_GIGATON_BALL)
     @JvmField
     val ANCIENT_ORIGIN_BALL = pokeBallItem(PokeBalls.ANCIENT_ORIGIN_BALL)
-    // skull ball
-    @JvmField
-    val SKULL_BALL = pokeBallItem(PokeBalls.SKULL_BALL)
 
     @JvmField
     val VIVICHOKE = compostableItem("vivichoke")
