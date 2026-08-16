@@ -1,6 +1,11 @@
 {
   "replace": false,
   "values": [
-    "#cobblemon:berries"
+    "#cobblemon:berries",
+    "cobblemon:booster_energy",
+    "cobblemon:electric_seed",
+    "cobblemon:psychic_seed",
+    "cobblemon:grassy_seed",
+    "cobblemon:misty_seed"
   ]
 }

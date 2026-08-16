@@ -445,7 +445,7 @@ object CobblemonItemGroups {
         entries.add(CobblemonItems.DESTINY_KNOT)
         entries.add(CobblemonItems.DRAGON_FANG)
         entries.add(CobblemonItems.EJECT_BUTTON)
-//        entries.add(CobblemonItems.EJECT_PACK)
+        entries.add(CobblemonItems.EJECT_PACK) // test this
         entries.add(CobblemonItems.EVERSTONE)
         entries.add(CobblemonItems.EVIOLITE)
         entries.add(CobblemonItems.EXPERT_BELT)
@@ -544,6 +544,15 @@ object CobblemonItemGroups {
         entries.add(CobblemonItems.DARK_GEM)
         entries.add(CobblemonItems.STEEL_GEM)
         entries.add(CobblemonItems.FAIRY_GEM)
+        // new held items
+        entries.add(CobblemonItems.BOOSTER_ENERGY)
+        entries.add(CobblemonItems.CLEAR_AMULET)
+        entries.add(CobblemonItems.ELECTRIC_SEED)
+        entries.add(CobblemonItems.PSYCHIC_SEED)
+        entries.add(CobblemonItems.GRASSY_SEED)
+        entries.add(CobblemonItems.MISTY_SEED)
+        // entries.add(CobblemonItems.RUSTED_SWORD)
+        // entries.add(CobblemonItems.RUSTED_SHIELD)
     }
 
     private fun pokeballentries(displayContext: DisplayContext, entries: Entries) {

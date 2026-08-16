@@ -99,6 +99,12 @@ class ActivateInstruction(val instructionSet: InstructionSet, val message: Battl
                 "focussash", "focusband" -> battleLang("activate.focusband", pokemonName, effect.typelessData)
                 "maxguard", "protect" -> battleLang("activate.protect", pokemonName)
                 "shadowforce", "hyperspacefury", "hyperspacehole" -> battleLang("activate.phantomforce", pokemonName)
+                // Booster Energy (revisit later with a better way to do this)
+                "protosynthesis", "quarkdrive" -> {
+                    if (message.hasOptionalArgument("fromitem")) {
+                        battleLang("activate.${effect.id}.fromitem", pokemonName)
+                    } else battleLang("activate.${effect.id}", pokemonName)
+                }
                 else -> battleLang("activate.${effect.id}", pokemonName, sourceName, extraEffect)
             }
             battle.broadcastChatMessage(lang)

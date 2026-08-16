@@ -82,6 +82,11 @@
     "cobblemon:spell_tag",
     "cobblemon:sticky_barb",
 
+    "cobblemon:clear_amulet",
+    "cobblemon:electric_seed",
+    "cobblemon:psychic_seed",
+    "cobblemon:grassy_seed",
+    "cobblemon:misty_seed",
 
     "cobblemon:toxic_orb",
     "cobblemon:twisted_spoon",
@@ -101,6 +106,7 @@
     "cobblemon:heat_rock",
     "cobblemon:smooth_rock",
     "cobblemon:icy_rock",
+    "cobblemon:booster_energy",
     "cobblemon:life_orb",
     "cobblemon:toxic_orb",
     "cobblemon:flame_orb",
