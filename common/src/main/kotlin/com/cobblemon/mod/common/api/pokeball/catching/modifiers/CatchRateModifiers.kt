@@ -16,6 +16,7 @@ import com.cobblemon.mod.common.api.tags.CobblemonBiomeTags
 import com.cobblemon.mod.common.api.types.ElementalType
 import com.cobblemon.mod.common.battles.BattleRegistry
 import com.cobblemon.mod.common.pokemon.Gender
+import net.minecraft.world.dimension.DimensionTypes
 
 /**
  * A collection of some default usages of [CatchRateModifier]s.
@@ -200,4 +201,13 @@ object CatchRateModifiers {
     }) { _, pokemon -> true }
 
 
+    /*
+     * Boosts catch rate by dimension.
+     */
+    val DIMENSIONAL = WorldStateModifier { _, entity ->
+        if (entity.world.dimensionKey.equals(DimensionTypes.THE_NETHER))
+            4F
+        else
+            1F
+    }
 }

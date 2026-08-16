@@ -837,7 +837,26 @@ object CobblemonItems : PlatformRegistry<Registry<Item>, RegistryKey<Registry<It
     val SMOOTH_ROCK = heldItem("smooth_rock")
     @JvmField
     val ICY_ROCK = heldItem("icy_rock")
-
+    // new held items
+    @JvmField
+    val BOOSTER_ENERGY = heldItem("booster_energy")
+    // in progress items
+    @JvmField
+    val CLEAR_AMULET = heldItem("clear_amulet")
+    // Eject Pack
+    // Binding Band
+    @JvmField
+    val ELECTRIC_SEED = heldItem("electric_seed")
+    @JvmField
+    val PSYCHIC_SEED = heldItem("psychic_seed")
+    @JvmField
+    val GRASSY_SEED = heldItem("grassy_seed")
+    @JvmField
+    val MISTY_SEED = heldItem("misty_seed")
+    @JvmField
+    val RUSTED_SWORD = heldItem("rusted_sword")
+    @JvmField
+    val RUSTED_SHIELD = heldItem("rusted_shield")
     // Mulch
     @JvmField
     val MULCH_BASE = noSettingsItem("mulch_base")
