@@ -840,6 +840,8 @@ object CobblemonItems : PlatformRegistry<Registry<Item>, RegistryKey<Registry<It
     // new held items
     @JvmField
     val BOOSTER_ENERGY = heldItem("booster_energy")
+    @JvmField
+    val SOUL_DEW = heldItem("soul_dew")
     // in progress items
     @JvmField
     val CLEAR_AMULET = heldItem("clear_amulet")

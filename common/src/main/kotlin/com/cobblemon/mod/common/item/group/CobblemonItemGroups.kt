@@ -546,6 +546,7 @@ object CobblemonItemGroups {
         entries.add(CobblemonItems.FAIRY_GEM)
         // new held items
         entries.add(CobblemonItems.BOOSTER_ENERGY)
+        entries.add(CobblemonItems.SOUL_DEW)
         entries.add(CobblemonItems.CLEAR_AMULET)
         entries.add(CobblemonItems.ELECTRIC_SEED)
         entries.add(CobblemonItems.PSYCHIC_SEED)
